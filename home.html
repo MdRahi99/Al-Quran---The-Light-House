@@ -1,23 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- CSS File Link -->
-    <link rel="stylesheet" href="./CSS/style.css">
-    <!-- CSS File Link -->
+<html lang="en" data-theme="wireframe">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Files Link -->
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CSS Files Link -->
 
     <title>Al Quran - The Light House</title>
-</head>
-<body>
-    
-    <h1 class="">Home Page</h1>
+  </head>
+  <body>
+    <h1 class="bg-gray-200 p-6 text-3xl text-center font-bold">
+      Al Quran - The Light House
+    </h1>
+
+    <div
+      class="card rounded-none w-96 mx-auto shadow-xl image-full m-12 items-center border-4 border-slate-800 hover:border-amber-400"
+    >
+      <figure class="opacity-50">
+        <img
+          src="./Assets//Images/all_surah_list_title_img.jpg"
+          alt="All Surah List Title Image"
+        />
+      </figure>
+      <div class="card-body items-center">
+        <h2 class="card-title text-2xl font-extrabold mt-3">
+          All Al-Quran Surah
+        </h2>
+
+        <p class="mt-3">
+          Tap Below For View Total 114 Al-Quran Surah's Information
+        </p>
+        <div class="card-actions justify-center mt-4">
+          <button
+            id="allListBtn"
+            class="px-6 py-2 font-extrabold hover:text-amber-500 text-black"
+          >
+            <i class="fa-solid fa-2x fa-angles-down animate-bounce"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="info" class="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-12"></div>
 
     <!-- JS Files Link -->
     <script src="./JS/app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/275d661fd1.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- JS Files Link -->
-</body>
+  </body>
 </html>
