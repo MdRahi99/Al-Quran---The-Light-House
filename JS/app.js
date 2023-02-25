@@ -7,15 +7,17 @@ function navigateToSpecificList(){
   }
 
 const loadAllListData = async () => {
-  const url = "http://api.alquran.cloud/v1/surah";
+  const url = "http://api.alquran.cloud/v1/quran/ar.alafasy";
   const res = await fetch(url);
   const data = await res.json();
   showAllListData(data.data);
 };
 
 const showAllListData = (allInfo) => {
+  const {surahs} = allInfo;
   const infoContainer = document.getElementById("listInfo");
-  allInfo.forEach((info) => {
+  surahs.forEach((info) => {
+    console.log(info)
     const infoDiv = document.createElement("div");
     infoDiv.classList.add(
       "card",
@@ -37,7 +39,7 @@ const showAllListData = (allInfo) => {
             </div>
             <div class="flex flex-col text-end">
               <h2 class="card-title text-lg font-serif text-amber-400 font-bold">${info.name}</h2>
-              <p class="text-md text-muted font-mono">${info.numberOfAyahs} Ayahs</p>
+              <p class="text-md text-muted font-mono">${info.ayahs.length} Ayahs</p>
             </div>
         </div>
             `;
