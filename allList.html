@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="wireframe">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@2.51.0/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
     <title>Al Quran - The Light House</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="my-12">
-        <div id="listInfo" class="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-2 justify-items-center"></div>
+      <div class="my-6 flex flex-row justify-center items-center">
+        <input
+          id="infoSearchField"
+          type="text"
+          placeholder="Please Enter Surah Number"
+          class="input input-bordered border-amber-400 w-full max-w-xs"
+        />
+        <button
+        id="infoSearchBtn"
+          class="py-3 px-4 hover:bg-amber-400 bg-white outline outline-amber-400 font-serif font-bold"
+        >
+          Search
+        </button>
+      </div>
+
+      <div class="flex justify-center">
+        <button
+          onclick="navigateToSpecificList()"
+          id="listInfo"
+          class="grid grid-cols-1 lg:grid-cols-3 gap-6 mx-2"
+        ></button>
+      </div>
     </div>
 
     <script src="./JS/app.js"></script>
@@ -24,5 +48,5 @@
       src="https://kit.fontawesome.com/275d661fd1.js"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>
